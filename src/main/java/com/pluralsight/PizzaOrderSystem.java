@@ -4,15 +4,28 @@ import java.util.Scanner;
 
 public class PizzaOrderSystem {
     public static void main(String[] args) {
-     Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-     System.out.println("Pizza Order System ");
-     System.out.println("Small $8.99, Medium $11.99, Large $14.99. Toppings are $1.50 each.");
-     System.out.println("students 17 and under get 10% off. Seniors 65 and over get 15% off.");
-     System.out.println();
+        System.out.println("Pizza Order System ");
+        System.out.println("Small $8.99, Medium $11.99, Large $14.99. Toppings are $1.50 each.");
+        System.out.println("Students 17 and under get 10% off. Seniors 65 and over get 15% off.");
+        System.out.println();
 
-     System.out.println("Your age (1-120): ");
-     int age = scanner.nextInt()
+        System.out.println("Your age (1-120): ");
+        int age = scanner.nextInt();
+
+        if (age < 1 || age > 120) {
+            System.out.println("Sorry, " + age + " is not valid age. Please enter an age from 1 to 120.");
+        } else {
+            orderPizza(scanner, age);
+        }
+
+        scanner.close();
+    }
+
+    public static void orderPizza(Scanner scanner, int age) {
+        System.out
+
 
     }
 }
